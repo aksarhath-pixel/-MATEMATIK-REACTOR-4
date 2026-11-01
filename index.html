@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MATEMATIK REACTOR</title>
+<style>
+:root{--blue:#087bea;--navy:#073b91;--pale:#eaf7ff;--green:#19ad50}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#eff8ff;color:#123366}
+header{position:sticky;top:0;z-index:10;background:#fff;padding:13px 4%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;box-shadow:0 3px 15px #0755ae20}
+.logo{font-size:25px;font-weight:900;color:var(--navy)}
+.logo small{display:block;font-size:12px;color:#4585bc}
+nav{display:flex;gap:5px;flex-wrap:wrap}
+nav a{padding:9px 12px;text-decoration:none;color:var(--navy);font-weight:bold;border-radius:18px}
+nav a:hover{background:#e0f2ff}
+main{max-width:1250px;margin:auto;padding:18px}
+.hero{padding:45px 20px;border-radius:25px;text-align:center;background:linear-gradient(120deg,#c9efff,#fff,#b5e2ff);box-shadow:0 7px 25px #087bea22}
+.hero .atom{font-size:65px}
+.hero h1{font-size:clamp(32px,6vw,58px);color:var(--navy);margin:10px}
+.hero p{font-size:18px}
+.btn{background:var(--blue);color:white;border:0;padding:12px 20px;border-radius:25px;font-size:15px;font-weight:bold;cursor:pointer;margin:5px}
+.btn:hover{filter:brightness(.92)}
+.panel{background:#fff;border:1px solid #c7e5ff;border-radius:20px;padding:22px;margin:17px 0;box-shadow:0 5px 18px #0755ae12}
+h2{color:var(--navy);margin-top:0}
+h3{color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.card{background:#eff8ff;padding:17px;border:1px solid #d1eaff;border-radius:17px}
+.icon{font-size:38px}
+.method{margin:12px 0;border:1px solid #b8dcff;border-radius:17px;overflow:hidden;background:#fff}
+.method summary{cursor:pointer;padding:17px;background:#eaf7ff;color:var(--navy);font-size:18px;font-weight:bold}
+.method-body{padding:18px;line-height:1.65}
+.method-body img{width:100%;max-width:480px;display:block;margin:12px auto;border-radius:15px}
+.example{padding:14px;background:#e7f5ff;color:#0755ae;border-radius:13px;font-size:21px;font-weight:bold;margin:12px 0}
+.video{display:inline-block;background:#e92336;color:white;text-decoration:none;padding:11px 16px;border-radius:22px;font-weight:bold;margin:6px 0}
+.quiz{background:#f0f9ff;border:1px solid #b8dcff;border-radius:16px;padding:16px;margin-top:15px}
+.quiz button{padding:12px 18px;border:1px solid #8bc5f6;background:white;color:#0647a0;border-radius:12px;margin:5px;font-size:17px;cursor:pointer}
+.quiz button:hover{background:#dcefff}
+.question{font-size:30px;font-weight:900;text-align:center;padding:18px;background:white;border-radius:13px}
+input,select,textarea{width:100%;padding:11px;border:1px solid #a8d3f4;border-radius:10px;margin:5px 0;font-size:15px}
+table{width:100%;border-collapse:collapse;margin:12px 0}
+td,th{border:1px solid #c9e3f8;padding:10px;text-align:center}
+th{background:#e5f4ff}
+.barline{display:flex;align-items:center;gap:10px;margin:12px 0}
+.bar{height:20px;background:linear-gradient(90deg,#087bea,#36b7ff);border-radius:20px}
+.small{font-size:13px;color:#607a98;line-height:1.6}
+footer{text-align:center;background:var(--navy);color:white;padding:22px;margin-top:30px}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">⚛ MATEMATIK REACTOR
+<small>Ойша есептеу – болашаққа қадам!</small></div>
+<nav>
+<a href="#home">Басты бет</a>
+<a href="#project">Жоба</a>
+<a href="#methods">Әдістер</a>
+<a href="#research">Нәтиже</a>
+<a href="#survey">Сауалнама</a>
+<a href="#device">Құрылғы</a>
+</nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="atom">⚛ 🧠 🔢</div>
+<h1>MATEMATIK REACTOR</h1>
+<h2>Ойша есептеу жылдамдығын арттыру</h2>
+<p>Ойлан! Есепте! Жылдамдығыңды дамыт!</p>
+<button class="btn" onclick="document.getElementById('methods').scrollIntoView({behavior:'smooth'})">Әдістерді үйрену</button>
+<button class="btn" onclick="document.getElementById('practice').scrollIntoView({behavior:'smooth'})">Жаттығуды бастау</button>
+</section>
+
+<section class="panel" id="project">
+<h2>📘 Ғылыми жобаның сипаттамасы</h2>
+<h3>Зерттеу тақырыбы</h3>
+<p><b>MATEMATIK REACTOR: Ойша есептеу жылдамдығын арттыру.</b></p>
+<h3>Зерттеудің өзектілігі</h3>
+<p>Бастауыш сыныпта математикалық дағдыларды қалыптастыру маңызды. Оқушылардың кейбірі есепті шығаруға көп уақыт жұмсайды, кейде амалдарды орындау кезінде қателеседі. Ойша есептеудің түрлі әдістерін үйрену оқушылардың есептеу дағдысын, зейінін және математикалық қызығушылығын дамытуға көмектеседі.</p>
+<div class="grid">
+<div class="card">
+<h3>🎯 Зерттеу мақсаты</h3>
+<p>3–4-сынып оқушыларының ойша есептеу жылдамдығы мен дәлдігін дамытуға арналған әдістерді зерттеу және интерактивті жаттығу жүйесін әзірлеу.</p>
+</div>
+<div class="card">
+<h3>📌 Зерттеу міндеттері</h3>
+<ol>
+<li>Ойша есептеу туралы ақпарат жинау.</li>
+<li>Әлемдік есептеу әдістерін зерттеу.</li>
+<li>Әдістерді оқушыларға түсінікті түрде көрсету.</li>
+<li>Интерактивті есептер мен жаттығулар құрастыру.</li>
+<li>Оқушылар арасында тәжірибе жүргізу.</li>
+<li>Бастапқы және кейінгі нәтижелерді салыстыру.</li>
+<li>Сауалнама арқылы оқушылардың пікірін анықтау.</li>
+</ol>
+</div>
+<div class="card">
+<h3>💡 Зерттеу болжамы</h3>
+<p>Егер оқушылар ойша есептеу әдістерін жүйелі түрде үйреніп, интерактивті жаттығулар орындаса, олардың есептеу жылдамдығы мен дәлдігі жақсаруы мүмкін.</p>
+</div>
+<div class="card">
+<h3>🔬 Зерттеу әдістері</h3>
+<ul>
+<li>Ақпарат жинау және талдау;</li>
+<li>Бақылау;</li>
+<li>Өлшеу;</li>
+<li>Салыстыру;</li>
+<li>Сауалнама;</li>
+<li>Эксперимент;</li>
+<li>Модельдеу.</li>
+</ul>
+</div>
+</div>
+<h3>Зерттеу нысаны</h3>
+<p>3–4-сынып оқушыларының математикалық есептеу әрекеті.</p>
+<h3>Зерттеу пәні</h3>
+<p>Ойша есептеу әдістері мен интерактивті жаттығулардың есептеу жылдамдығына ықпалы.</p>
+<h3>Практикалық маңызы</h3>
+<p>Жасалған сайтты бастауыш сынып оқушылары сабақта, үйде және қосымша жаттығу кезінде пайдалана алады.</p>
+<h3>Жобада орындалған жұмыстар</h3>
+<ul>
+<li>Әлемдік есептеу әдістері туралы ақпарат жинақталды.</li>
+<li>Әдістерге арналған түсіндірмелер мен мысалдар әзірленді.</li>
+<li>Интерактивті жаттығу сайты жасалды.</li>
+<li>20 оқушы қатысқан зерттеу деректері салыстырылды.</li>
+<li>Оқушыларға арналған сауалнама әзірленді.</li>
+</ul>
+</section>
+
+<section class="panel" id="methods">
+<h2>🌍 Әлемдік ойша есептеу әдістері</h2>
+<p>Әдістің атауын басып, суретін, түсіндірмесін, мысалын оқы. Содан кейін шағын тест тапсыр!</p>
+
+<details class="method">
+<summary>🧮 1. Жапония – Соробан</summary>
+<div class="method-body">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Soroban.jpg" alt="Жапон соробаны" onerror="this.style.display='none'">
+<h3>Соробан дегеніміз не?</h3>
+<p>Соробан – Жапонияда қолданылатын дәстүрлі есепшот. Оның моншақтарын жылжыту арқылы сандарды көрсетуге және арифметикалық амалдарды орындауға болады. Жаттығу барысында оқушы моншақтардың орналасуын ойша елестетуді үйренеді.</p>
+<h3>Қалай есептейміз?</h3>
+<ul><li>Әр баған бір разрядты білдіреді.</li><li>Төменгі моншақтардың әрқайсысы 1-ге тең.</li><li>Жоғарғы моншақ 5-ке тең.</li><li>Моншақтарды есептеу сызығына жылжыту арқылы сан көрсетіледі.</li></ul>
+<div class="example">23 + 14 = 37</div>
+<p>23 + 10 = 33. 33 + 4 = 37.</p>
+<a class="video" target="_blank" href="https://www.youtube.com/results?search_query=Japanese+soroban+for+beginners">▶ Соробан видеосын көру</a>
+<div class="quiz" data-quiz="soroban">
+<h3>Өзіңді сына – Соробан</h3><div class="question">12 + 15 = ?</div>
+<button onclick="answer(this,27, 'soroban')">27</button><button onclick="answer(this,25,'soroban')">25</button><button onclick="answer(this,28,'soroban')">28</button>
+<p class="feedback">Жауабыңды таңда!</p>
+</div>
+</div>
+</details>
+
+<details class="method">
+<summary>🔢 2. Қытай – Суаньпань</summary>
+<div class="method-body">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_abacus.jpg" alt="Қытай суаньпань есепшоты" onerror="this.style.display='none'">
+<h3>Суаньпань дегеніміз не?</h3>
+<p>Суаньпань – Қытайдың дәстүрлі есепшоты. Моншақтар арқылы сандарды көрсетіп, қосу, азайту және басқа амалдарды орындауға болады.</p>
+<div class="example">12 + 15 = 27</div>
+<p>12-ге 10 қосамыз – 22. Оған 5 қосамыз – 27.</p>
+<a class="video" target="_blank" href="https://www.youtube.com/results?search_query=Chinese+suanpan+abacus+lesson">▶ Суаньпань видеосын көру</a>
+<div class="quiz" data-quiz="suanpan">
+<h3>Өзіңді сына – Суаньпань</h3><div class="question">21 + 16 = ?</div>
+<button onclick="answer(this,37,'suanpan')">37</button><button onclick="answer(this,36,'suanpan')">36</button><button onclick="answer(this,38,'suanpan')">38</button>
+<p class="feedback">Жауабыңды таңда!</p>
+</div>
+</div>
+</details>
+
+<details class="method">
+<summary>🪷 3. Үндістан – Ведалық математика</summary>
+<div class="method-body">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Vedic_Mathematics.jpg" alt="Математикалық есеп жазбасы" onerror="this.style.display='none'">
+<h3>Бұл қандай әдіс?</h3>
+<p>Ведалық математика – есептеуді жеңілдетуге арналған түрлі тәсілдер жүйесі. Кейбір тәсілдер көбейту мен қосу амалдарын ойша орындауға көмектеседі.</p>
+<div class="example">25 × 4 = 100</div>
+<p>25 × 2 = 50. 50 × 2 = 100. Осылайша екі еселеу арқылы есептейміз.</p>
+<a class="video" target="_blank" href="https://www.youtube.com/results?search_query=vedic+maths+for+kids">▶ Ведалық математика видеосы</a>
+<div class="quiz" data-quiz="vedic">
+<h3>Өзіңді сына – Ведалық тәсіл</h3><div class="question">15 × 4 = ?</div>
+<button onclick="answer(this,60,'vedic')">60</button><button onclick="answer(this,55,'vedic')">55</button><button onclick="answer(this,65,'vedic')">65</button>
+<p class="feedback">Жауабыңды таңда!</p>
+</div>
+</div>
+</details>
+
+<details class="method">
+<summary>✋ 4. Саусақпен есептеу</summary>
+<div class="method-body">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fingers.jpg" alt="Қол саусақтары" onerror="this.style.display='none'">
+<h3>Саусақпен есептеу</h3>
+<p>Саусақтар – сандарды көрнекі көрсетуге көмектесетін құрал. Бұл әдіс әсіресе сандардың құрамын түсінуге пайдалы.</p>
+<div class="example">8 + 5 = 13</div>
+<p>8-ге 2 қосып, 10 жасаймыз. 5-тен 2 қалғанда, тағы 3 қалады. 10 + 3 = 13.</p>
+<a class="video" target="_blank" href="https://www.youtube.com/results?search_query=finger+math+for+kids">▶ Саусақпен есептеу видеосы</a>
+<div class="quiz" data-quiz="finger">
+<h3>Өзіңді сына – Саусақпен есептеу</h3><div class="question">9 + 6 = ?</div>
+<button onclick="answer(this,15,'finger')">15</button><button onclick="answer(this,14,'finger')">14</button><button onclick="answer(this,16,'finger')">16</button>
+<p class="feedback">Жауабыңды таңда!</p>
+</div>
+</div>
+</details>
+
+<details class="method">
+<summary>🟠 5. Заттарды топтау және ондыққа толықтыру</summary>
+<div class="method-body">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/Counting_blocks.jpg" alt="Санау текшелері" onerror="this.style.display='none'">
+<h3>Қалай есептейміз?</h3>
+<p>Моншақ, текше, таяқша сияқты заттарды топтап, сандардың құрамын түсінеміз. Бұл әдіс есепті біртіндеп ойша шығаруға үйретеді.</p>
+<div class="example">8 + 5 = 13</div>
+<p>8-ге 2 қосып 10 аламыз. Қалған 3-ті қосамыз: 10 + 3 = 13.</p>
+<a class="video" target="_blank" href="https://www.youtube.com/results?search_query=make+ten+strategy+math+for+kids">▶ Ондыққа толықтыру видеосы</a>
+<div class="quiz" data-quiz="group">
+<h3>Өзіңді сына – Ондыққа толықтыру</h3><div class="question">7 + 6 = ?</div>
+<button onclick="answer(this,13,'group')">13</button><button onclick="answer(this,12,'group')">12</button><button onclick="answer(this,14,'group')">14</button>
+<p class="feedback">Жауабыңды таңда!</p>
+</div>
+</div>
+</details>
+<p class="small">Ескерту: суреттер интернеттен жүктеледі. Егер белгілі бір сурет ашылмаса, оны өзің жүктеген суретпен ауыстыруға болады. Видео сілтемелері YouTube іздеу бетін ашады.</p>
+</section>
+
+<section class="panel" id="practice">
+<h2>🎮 MATEMATIK REACTOR – жалпы жаттығу</h2>
+<input id="student" placeholder="Оқушының аты-жөні">
+<select id="level">
+<option value="easy">Жеңіл</option>
+<option value="medium" selected>Орташа</option>
+<option value="hard">Күрделі</option>
+</select>
+<p>Сұрақ: <b id="num">1</b>/10 | Уақыт: <b id="time">00:00</b></p>
+<div class="question" id="q">15 × 3 = ?</div>
+<div id="options"></div>
+<p id="feedback">Жауабыңды таңда!</p>
+<button class="btn" onclick="nextQuestion()">Келесі есеп</button>
+<button class="btn" onclick="restart()">Қайта бастау</button>
+<p>Дұрыс жауап: <b id="correct">0</b> | Қате жауап: <b id="wrong">0</b></p>
+<div class="barline"><div class="bar" id="gamebar" style="width:0%"></div></div>
+<div id="gameResult"></div>
+</section>
+
+<section class="panel" id="research">
+<h2>📊 Зерттеу нәтижелері</h2>
+<p>Зерттеу жұмысына 3–4-сыныптың 20 оқушысы қатысты. Әр кезеңде 10 есептен орындалды.</p>
+<div class="grid">
+<div class="card"><h3>Қатысушылар</h3><div style="font-size:35px;font-weight:bold">20</div>оқушы</div>
+<div class="card"><h3>Уақыттың қысқаруы</h3><div style="font-size:35px;font-weight:bold">16,8%</div></div>
+<div class="card"><h3>Дұрыс жауап</h3><div style="font-size:35px;font-weight:bold">7,2 → 8,2</div></div>
+</div>
+<h3>Орташа есептеу уақыты</h3>
+<div class="barline"><span>Бастапқы</span><div class="bar" style="width:100%"></div><b>52,5 сек.</b></div>
+<div class="barline"><span>Кейінгі</span><div class="bar" style="width:83.2%"></div><b>43,7 сек.</b></div>
+<h3>Орташа дұрыс жауап саны</h3>
+<div class="barline"><span>Бастапқы</span><div class="bar" style="width:72%"></div><b>7,2</b></div>
+<div class="barline"><span>Кейінгі</span><div class="bar" style="width:82%"></div><b>8,2</b></div>
+<table>
+<tr><th>Көрсеткіш</th><th>Бастапқы</th><th>Кейінгі</th></tr>
+<tr><td>Орташа уақыт</td><td>52,5 сек.</td><td>43,7 сек.</td></tr>
+<tr><td>Дұрыс жауап</td><td>7,2</td><td>8,2</td></tr>
+<tr><td>Қате жауап</td><td>2,8</td><td>1,8</td></tr>
+</table>
+<p class="small">Бұл сандар жоба авторы ұсынған деректер. Ғылыми қорғауда оларды нақты өлшеу парақтарымен сәйкестендір.</p>
+</section>
+
+<section class="panel" id="survey">
+<h2>📝 Оқушыларға арналған сауалнама</h2>
+<p>Сұрақтарға жауап беріп, өз пікіріңді білдір.</p>
+<form id="surveyForm">
+<label>1. Сыныбың</label><select name="class"><option>3-сынып</option><option>4-сынып</option></select>
+<label>2. Математика пәні саған ұнай ма?</label><select name="q2"><option>Иә</option><option>Орташа</option><option>Жоқ</option></select>
+<label>3. Ойша есептеу ұнай ма?</label><select name="q3"><option>Иә</option><option>Кейде</option><option>Жоқ</option></select>
+<label>4. Қай амал саған оңай?</label><select name="q4"><option>Қосу</option><option>Азайту</option><option>Көбейту</option><option>Бөлу</option></select>
+<label>5. Есеп шығарғанда қиналасың ба?</label><select name="q5"><option>Иә</option><option>Кейде</option><option>Жоқ</option></select>
+<label>6. Соробан әдісі қызықты болды ма?</label><select name="q6"><option>Иә</option><option>Орташа</option><option>Жоқ</option></select>
+<label>7. Ойын арқылы есептеген ұнай ма?</label><select name="q7"><option>Иә</option><option>Кейде</option><option>Жоқ</option></select>
+<label>8. Жаттығу есепті тез шығаруға көмектесті ме?</label><select name="q8"><option>Иә</option><option>Аздап</option><option>Жоқ</option></select>
+<label>9. Тағы жаттығуды қалайсың ба?</label><select name="q9"><option>Иә</option><option>Мүмкін</option><option>Жоқ</option></select>
+<label>10. Қай әдіс ұнады?</label><select name="q10"><option>Соробан</option><option>Суаньпань</option><option>Ведалық математика</option><option>Саусақпен есептеу</option><option>Заттарды топтау</option></select>
+<label>11. Есеп шығаруда өзіңе сенімдісің бе?</label><select name="q11"><option>Иә</option><option>Кейде</option><option>Жоқ</option></select>
+<label>12. Бұл жаттығуды досыңа ұсынасың ба?</label><select name="q12"><option>Иә</option><option>Мүмкін</option><option>Жоқ</option></select>
+<label>13. Өз пікірің</label><textarea name="q13" placeholder="Ойыңды жаз..."></textarea>
+<button class="btn" type="submit">Сауалнаманы жіберу</button>
+</form>
+<p id="surveyMessage"></p>
+<p>Жиналған жауап саны: <b id="surveyCount">0</b></p>
+<button class="btn" onclick="downloadSurvey()">Сауалнама нәтижесін жүктеу</button>
+<p class="small">Жауаптар осы браузерде сақталады. Әртүрлі құрылғылардан ортақ жинау үшін Google Forms немесе сервер қажет.</p>
+</section>
+
+<section class="panel" id="device">
+<h2>⚙️ Arduino құрылғысының жобалық моделі</h2>
+<div class="grid">
+<div class="card"><div class="icon">🔌</div><b>Arduino Uno</b><p>Құрылғыны басқаратын тақша.</p></div>
+<div class="card"><div class="icon">🖥️</div><b>LCD 1602 I2C</b><p>Есеп пен нәтижені көрсететін экран.</p></div>
+<div class="card"><div class="icon">🔘</div><b>3 жауап батырмасы</b><p>Оқушы жауабын енгізеді.</p></div>
+<div class="card"><div class="icon">💡</div><b>LED және buzzer</b><p>Дұрыс немесе қате жауап туралы белгі береді.</p></div>
+</div>
+<h3>Құрылғының жұмыс кезеңдері</h3>
+<ol>
+<li>Экранда есеп көрсетіледі.</li>
+<li>Оқушы батырма арқылы жауап таңдайды.</li>
+<li>Arduino жауаптың дұрыстығын тексереді.</li>
+<li>Жасыл немесе қызыл жарық жанады.</li>
+<li>10 есеп аяқталған соң нәтиже көрсетіледі.</li>
+</ol>
+<p class="small">Бұл – құрылғының жобалық сипаттамасы. Нақты Arduino құрылғысы құрастырылып, бағдарламаланып, сынақтан өткізілген жағдайда ғана оны жұмыс істейтін прототип деп көрсету керек. Бұл сайт Arduino-ға әзірге тікелей қосылмаған.</p>
+</section>
+
+<section class="panel">
+<h2>🏁 Қорытынды</h2>
+<p>Жоба аясында ойша есептеудің түрлі тәсілдері қарастырылып, оқушыларға арналған интерактивті жаттығу жүйесі әзірленді. Ұсынылған зерттеу деректерінде орташа есептеу уақыты 52,5 секундтан 43,7 секундқа қысқарған, ал дұрыс жауап саны 7,2-ден 8,2-ге артқан.</p>
+<p>Бұл нәтижелер жүйелі жаттығу оқушылардың есептеу дағдысын жақсартуға ықпал етуі мүмкін екенін көрсетеді.</p>
+<h3>Ұсыныстар</h3>
+<ul>
+<li>Күн сайын 5–10 минут ойша есептеу;</li>
+<li>Әртүрлі есептеу тәсілдерін кезектестіріп қолдану;</li>
+<li>Есепті ойын түрінде орындау;</li>
+<li>Нәтижені уақыт пен дәлдік бойынша бақылау.</li>
+</ul>
+<h2 style="text-align:center">💙 БОЛАШАҚ – СЕНІҢ ҚОЛЫҢДА!</h2>
+</section>
+
+</main>
+<footer>⚛ MATEMATIK REACTOR · Ойша есептеу жылдамдығын арттыру · Білім – күш!</footer>
+
+<script>
+// Әр әдістің шағын тесті
+function answer(button,right,quizId){
+ let box=button.closest('.quiz');
+ if(box.dataset.done==='yes')return;
+ box.dataset.done='yes';
+ let feedback=box.querySelector('.feedback');
+ if(Number(button.textContent)===right){
+  feedback.textContent='🌟 Дұрыс жауап! Жарайсың!';
+  feedback.style.color='green';
+ }else{
+  feedback.textContent='Дұрыс жауап: '+right+'. Тағы да жаттығып көр!';
+  feedback.style.color='red';
+ }
+ box.querySelectorAll('button').forEach(b=>b.disabled=true);
+}
+
+// Жалпы 10 сұрақтық жаттығу
+let questions=[],index=0,correct=0,wrong=0,start=0,clock=null,done=false;
+const $=id=>document.getElementById(id);
+function random(a,b){return Math.floor(Math.random()*(b-a+1))+a}
+function buildQuestions(){
+ let level=$('level').value;
+ return Array.from({length:10},()=>{
+  let a,b,op;
+  if(level==='easy'){a=random(2,20);b=random(1,10);op=['+','−'][random(0,1)]}
+  else if(level==='hard'){a=random(10,35);b=random(2,12);op=['+','−','×'][random(0,2)]}
+  else{a=random(5,25);b=random(2,10);op=['+','−','×'][random(0,2)]}
+  let result=op==='+'?a+b:op==='−'?a-b:a*b;
+  return {a,b,op,result}
+ })
+}
+function renderQuestion(){
+ done=false;
+ let q=questions[index];
+ $('num').textContent=index+1;
+ $('q').textContent=q.a+' '+q.op+' '+q.b+' = ?';
+ $('feedback').textContent='Жауабыңды таңда!';
+ $('options').innerHTML='';
+ let opts=new Set([q.result]);
+ while(opts.size<3)opts.add(q.result+random(-10,10));
+ [...opts].sort(()=>Math.random()-.5).forEach(value=>{
+  let button=document.createElement('button');
+  button.textContent=value;
+  button.onclick=()=>checkAnswer(value);
+  $('options').appendChild(button);
+ });
+}
+function checkAnswer(value){
+ if(done)return;
+ done=true;
+ let q=questions[index];
+ $('options').querySelectorAll('button').forEach(b=>b.disabled=true);
+ if(value===q.result){correct++;$('feedback').textContent='🌟 Дұрыс!';$('feedback').style.color='green'}
+ else{wrong++;$('feedback').textContent='Дұрыс жауап: '+q.result;$('feedback').style.color='red'}
+ $('correct').textContent=correct;
+ $('wrong').textContent=wrong;
+ $('gamebar').style.width=((index+1)*10)+'%';
+}
+function nextQuestion(){
+ if(done===false){$('feedback').textContent='Алдымен жауапты таңда!';return}
+ if(index<9){index++;renderQuestion()}
+ else{
+  clearInterval(clock);
+  let seconds=Math.floor((Date.now()-start)/1000);
+  $('q').textContent='🎉 Жаттығу аяқталды!';
+  $('options').innerHTML='';
+  $('feedback').textContent='Нәтиже: '+correct+'/10';
+  $('gameResult').innerHTML='<h3>🏆 '+($('student').value||'Оқушы')+'</h3><p>Дұрыс жауап: '+correct+'</p><p>Қате жауап: '+wrong+'</p><p>Уақыт: '+seconds+' секунд</p>';
+  let data=JSON.parse(localStorage.getItem('reactorResults')||'[]');
+  data.push({name:$('student').value||'Оқушы',correct,wrong,seconds,date:new Date().toLocaleString()});
+  localStorage.setItem('reactorResults',JSON.stringify(data));
+ }
+}
+function restart(){
+ clearInterval(clock);
+ index=0;correct=0;wrong=0;
+ $('correct').textContent=0;$('wrong').textContent=0;
+ $('gamebar').style.width='0%';$('gameResult').innerHTML='';
+ $('time').textContent='00:00';
+ questions=buildQuestions();start=Date.now();
+ clock=setInterval(()=>{let s=Math.floor((Date.now()-start)/1000);$('time').textContent=String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')},1000);
+ renderQuestion();
+}
+$('level').addEventListener('change',restart);
+restart();
+
+// Сауалнама сақтау және CSV жүктеу
+function surveyList(){return JSON.parse(localStorage.getItem('reactorSurvey')||'[]')}
+function updateSurvey(){ $('surveyCount').textContent=surveyList().length}
+$('surveyForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ let response=Object.fromEntries(new FormData(this).entries());
+ let list=surveyList();list.push({...response,date:new Date().toLocaleString()});
+ localStorage.setItem('reactorSurvey',JSON.stringify(list));
+ this.reset();
+ $('surveyMessage').textContent='✅ Сауалнама жауабы сақталды. Рақмет!';
+ updateSurvey();
+});
+function downloadSurvey(){
+ let list=surveyList();
+ if(!list.length){alert('Әзірге жауап жоқ.');return}
+ let keys=Object.keys(list[0]);
+ let csv=[keys.join(';'),...list.map(r=>keys.map(k=>'"'+String(r[k]||'').replaceAll('"','""')+'"').join(';'))].join('\n');
+ let blob=new Blob(['\ufeff'+csv],{type:'text/csv;charset=utf-8'});
+ let a=document.createElement('a');
+ a.href=URL.createObjectURL(blob);a.download='reactor-survey.csv';a.click();
+ URL.revokeObjectURL(a.href);
+}
+updateSurvey();
+</script>
+</body>
+</html>
